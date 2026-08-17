@@ -1,0 +1,268 @@
+/* ------------------------------
+   Configuración general
+--------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 20px;
+    font-family: bad script;
+    color: #080707;
+}
+
+/* -------------------------------------------
+   Video de fondo
+------------------------------------ */
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ------------------------------
+   Contenedor principal
+---------------------------------------------------------------- */
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background: #edeaea74;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------------------------------------
+   Encabezado
+--------------------------------- */
+
+.todo-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.todo-header p {
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.todo-header img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+/* ------------------------------
+   Formulario
+------------------------------------------*/
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+
+}
+
+.task-form input {
+    flex: 1;
+    padding: 12px 14px;
+    background: #fbf8fa9e;
+    border: 1px solid #cccccca0;
+    border-radius: 8px;
+    color: #000000;
+    font-size: 16px;
+    outline: none;
+    font-family: Merienda;
+}
+
+.task-form input:focus {
+    border-color: #f7bae3;
+    font-family: Merienda;
+}
+
+.task-form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #0f0e0e81;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Merienda;
+    cursor: pointer;
+
+}
+
+.task-form button:hover {
+    background: #FAC3D4;
+}
+
+
+/* ------------------------------
+   Mensaje de validación
+--------------------------------- */
+
+.validation-message {
+    min-height: 20px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    color: #8d0101;
+    font-size: 18px;
+}
+
+/* ------------------------------
+   Contador de progreso
+--------------------------------- */
+
+.progress {
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+    color: #1f1f1f;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Merienda;
+    text-align: center;
+}
+
+/* ------------------------------------
+   Estadísticas de progreso
+------------------------------------ */
+
+.statistics {
+    margin-top: 18px;
+    padding: 16px;
+    background: #7c313a30;
+    border: 1px solid #f8dce6;
+    border-radius: 14px;
+}
+
+.statistics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Merienda;
+
+}
+
+#percentageText {
+    font-size: 20px;
+    color: #fffdfe;
+    font-family: Merienda;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    background: #e7e0e2a9;
+    border-radius: 20px;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: #e89ab7e6;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.statistics-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #faf8f9;
+    font-size: 13px;
+    font-family: Merienda;
+}
+
+
+/* ------------------------------
+   Lista de tareas
+--------------------------------- */
+
+.task-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f5f1f1a9;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.task-item:hover {
+    background: #eef0f3;
+}
+
+/* Checkbox */
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #5b2c3d;
+}
+
+/* Texto de la tarea */
+
+.task-text {
+    flex: 1;
+    font-size: 20px;
+    word-break: break-word;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #702e47c3;
+}
+
+/* Botón eliminar */
+
+.delete-button {
+    border: none;
+    background: transparent;
+    color: #2b081d;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    color: #c91554;
+}
+
+/* ------------------------------
+   Mensaje cuando no hay tareas
+--------------------------------- */
+
+.empty-message {
+    padding: 25px 10px;
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+}
